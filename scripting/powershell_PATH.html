@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing PATH in PowerShell</title>
+</head>
+<body>
+    <h1>Managing PATH in PowerShell</h1>
+    <ol>
+        <li>
+            <p><strong>Open PowerShell:</strong></p>
+            <p>Press <code>Win + X</code> and select "Windows PowerShell" or "Windows PowerShell (Admin)" from the menu. You can also search for "PowerShell" in the Start menu.</p>
+        </li>
+        <li>
+            <p><strong>Display the current PATH:</strong></p>
+            <p>To view your current PATH, enter the following command in PowerShell:</p>
+            <pre><code>$env:Path</code></pre>
+        </li>
+        <li>
+            <p><strong>Add a new directory to the PATH:</strong></p>
+            <p>To add a new directory to the PATH, use the following command, replacing <code>C:\your\new\directory</code> with the actual directory path:</p>
+            <pre><code>$env:Path += ";C:\your\new\directory"</code></pre>
+            <p>This will only temporarily modify the PATH for the current PowerShell session. To make the change permanent, proceed to the next step.</p>
+        </li>
+        <li>
+            <p><strong>Save the updated PATH permanently:</strong></p>
+            <p>To save the updated PATH permanently, open the "Environment Variables" window:</p>
+            <ul>
+                <li>Press <code>Win + X</code>, then click on "System".</li>
+                <li>Click on "Advanced system settings" on the right side of the window.</li>
+                <li>In the "System Properties" window, go to the "Advanced" tab and click on "Environment Variables".</li>
+            </ul>
+            <p>In the "Environment Variables" window, under the "System variables" section, find the Path variable, select it, and click on "Edit". In the "Edit environment variable" window, click on "New" and add the new directory path. Click "OK" to save the changes and close all the open windows.</p>
+        </li>
+        <li>
+            <p><strong>Verify the updated PATH:</strong></p>
+            <p>Close and reopen PowerShell, then run the following command to check if the updated PATH is applied:</p>
+            <pre><code>$env:Path</code></pre>
+            <p>The new directory should now be included in the PATH.</p>
+        </li>
+        <li>
+            <p><strong>Remove a directory from the PATH:</strong></p>
+            <p>To remove a directory from the PATH, you'll need to follow the same steps as in step 4 to open the "Environment Variables" window. In the "Edit environment variable" window, select the directory you want to remove and click "Delete". Click "OK" to save the changes and close all the open windows.</p>
+            <p>Now your PATH should be updated with the desired changes.</p>
+        </li>
+    </ol>
+</body>
+</html>
